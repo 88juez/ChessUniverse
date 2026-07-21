@@ -1,17 +1,15 @@
-from chess_universe.core.color import Color
-from chess_universe.pieces.pawn import Pawn
+from chess_universe.engine.board import Board
+from chess_universe.engine.move_generator import MoveGenerator
 
+board = Board()
+board.setup()
 
-def main():
-    white = Pawn(Color.WHITE)
-    black = Pawn(Color.BLACK)
+generator = MoveGenerator(board)
 
-    print(white)
-    print(black)
+moves = generator.generate_moves("white")
 
-    print(white.has_moved)
-    print(black.has_moved)
+print(f"Movimientos blancos: {len(moves)}")
+print()
 
-
-if __name__ == "__main__":
-    main()
+for move in moves:
+    print(move)

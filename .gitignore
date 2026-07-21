@@ -1,25 +1,24 @@
-# Entorno virtual
+# Entornos virtuales
 .venv/
+venv/
 
 # Caché de Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
 
-# Configuración VS Code
+# Configuración de VS Code
 .vscode/
 
-# Pytest
-.pytest_cache/
-
-# Ruff
-.ruff_cache/
-
-# Archivos temporales
-*.log
-*.tmp
-
-# Windows
+# Archivos del sistema
+.DS_Store
 Thumbs.db
-Desktop.ini
+
+# Logs
+*.log
+
+# Distribuciones
+build/
+dist/
+
+# Archivos de Python
+*.egg-info/

@@ -1,43 +1,23 @@
-"""
-===========================================================
-Chess Universe Engine
-piece.py
-===========================================================
-"""
+from __future__ import annotations
 
-from abc import ABC, abstractmethod
-
-from src.chess_universe.core.color import Color
-from src.chess_universe.core.piecetype import PieceType
+from chess_universe.core.color import Color
 
 
-class Piece(ABC):
+class Piece:
     """
-    Clase base para todas las piezas.
+    Clase base para todas las piezas del ajedrez.
     """
 
-    def __init__(
-        self,
-        color: Color,
-        piece_type: PieceType,
-        symbol: str,
-        value: int,
-    ):
-
+    def __init__(self, color: Color):
         self.color = color
-        self.piece_type = piece_type
-        self.symbol = symbol
-        self.value = value
-
         self.has_moved = False
 
-    @abstractmethod
-    def legal_moves(self, board, position):
+    @property
+    def symbol(self) -> str:
         """
-        Devuelve los movimientos legales.
+        Cada pieza devolverá su símbolo.
         """
-        pass
+        raise NotImplementedError
 
-    def __str__(self):
-
+    def __repr__(self) -> str:
         return self.symbol

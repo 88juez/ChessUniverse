@@ -1,14 +1,16 @@
-from chess_universe.engine.board import Board
+from chess_universe.core.color import Color
+from chess_universe.pieces.pawn import Pawn
 
 
 def main():
-    board = Board()
+    white = Pawn(Color.WHITE)
+    black = Pawn(Color.BLACK)
 
-    print(len(board.squares))
-    print(len(board.squares[0]))
+    print(white)
+    print(black)
 
-    print(board.get_square(0, 0).row, board.get_square(0, 0).col)
-    print(board.get_square(7, 7).row, board.get_square(7, 7).col)
+    print(white.has_moved)
+    print(black.has_moved)
 
 
 if __name__ == "__main__":

@@ -1,11 +1,25 @@
 # Entorno virtual
 .venv/
-venv/
-ENV/
 
-# Archivos de Python / Cache
+# Caché de Python
 __pycache__/
-*.py[cod]
+*.pyc
+*.pyo
+*.pyd
 
-# Configuración de VS Code local
+# Configuración VS Code
 .vscode/
+
+# Pytest
+.pytest_cache/
+
+# Ruff
+.ruff_cache/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Windows
+Thumbs.db
+Desktop.ini
